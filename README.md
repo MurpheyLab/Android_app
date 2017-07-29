@@ -1,5 +1,5 @@
 # Android_app
-This app includes two games that run Sequential Action Control in the background. The entire Eclipse project is provided.
+This app includes two games that run Sequential Action Control in the background.
 
 # Dependencies
 This code requires the the Boost and Eigen libraries.
