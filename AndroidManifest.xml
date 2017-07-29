@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sacgames"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/gameicon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".ChoiceGameActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".pendulumbalance.MainActivity"
+            android:label="@string/title_activity_pendulum"
+            android:parentActivityName=".ChoiceGameActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.polebalance.ChoiceGameActivity" />
+        </activity>
+        <activity
+            android:name=".pendulumbalance.PendulumActivity"
+            android:label="@string/title_activity_pendulum"
+            android:parentActivityName=".pendulumbalance.MainActivity"
+            android:screenOrientation="landscape" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.polebalance.MainActivity" />
+        </activity>
+        <activity
+            android:name=".hopper.MainActivity2"
+            android:label="@string/title_activity_hopper"
+            android:parentActivityName=".ChoiceGameActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.polebalance.ChoiceGameActivity" />
+        </activity>
+        <activity
+            android:name=".hopper.HopperActivity"
+            android:label="@string/title_activity_hopper"
+            android:parentActivityName=".hopper.MainActivity2"
+            android:screenOrientation="landscape" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.polebalance.MainActivity2" />
+        </activity>
+        <activity
+            android:name="com.sacgames.hopper.HighScore"
+            android:label="@string/title_activity_high_score"
+            android:parentActivityName=".hopper.MainActivity2"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sacgames.hopper.MainActivity2" />
+        </activity>
+    </application>
+
+</manifest>
