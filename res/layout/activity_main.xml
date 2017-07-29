@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"     
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundpend"
+    android:id="@+id/RootView0">
+    
+    
+   	<RelativeLayout  
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true"
+	    android:gravity="center_vertical"
+	    android:orientation="horizontal">
+
+
+	    <ImageView
+	        android:layout_width="100dp"
+	        android:layout_height="70dp"
+	        android:scaleType="centerInside"
+   	    	android:padding="0dp"
+	    	android:layout_alignParentRight="true"
+	        android:src="@drawable/northwestern"	/>
+	    
+  		    <ImageView
+	        android:layout_width="100dp"
+	        android:layout_height="70dp"
+	        android:scaleType="centerInside"
+	        android:padding="5dp"
+	    	android:layout_alignParentLeft="true"
+	        android:src="@drawable/nxr"	/>
+		        
+
+     </RelativeLayout>
+    
+    
+    
+    <LinearLayout android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_gravity="center_vertical"
+          android:gravity="center"
+   		  android:orientation="vertical">
+
+	     <Button
+	         android:layout_width="200dp"
+	         android:layout_height="wrap_content"
+	         android:text="@string/new_game" 
+	         android:background="@android:drawable/btn_default"
+	         android:onClick="startnewGame"/>
+	     
+	     <Button
+	        android:id="@+id/resumebutton"
+	        android:layout_width="200dp"
+	        android:layout_height="wrap_content"
+	        android:text="@string/resume_game"
+	        android:background="@android:drawable/btn_default"
+	        android:onClick="resumeGame" />
+	          	
+	    <TextView 
+	        android:layout_width="200dp"
+	        android:layout_height="40dp"
+	        android:text="Difficulty level"
+	        android:gravity="center"  />
+	
+		<RadioGroup 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal">
+		    <RadioButton android:id="@+id/radio_easy"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="Easy"
+		        android:textSize="12sp"
+		        android:checked = "true"
+		        android:onClick="onRadioButtonClicked"/>
+		    <RadioButton android:id="@+id/radio_medium"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="Medium"
+		        android:textSize="12sp"
+		        android:onClick="onRadioButtonClicked"/>	    
+	   	    <RadioButton android:id="@+id/radio_hard"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="Hard"
+		        android:textSize="12sp"
+		        android:onClick="onRadioButtonClicked"/>
+		</RadioGroup>
+		
+		<ProgressBar
+		        android:id="@+id/progressBar1"
+		        style="?android:attr/progressBarStyleHorizontal"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:max="100"
+		        android:progress="1" 
+		        android:minHeight="15dp"
+	        	android:minWidth="150dp"
+		        android:visibility="invisible"
+		        android:indeterminate="true" />	
+	        
+    </LinearLayout>
+	      
+    
+    <!-- Info here -->
+	<RelativeLayout  
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentBottom="true"
+		    android:gravity="center_vertical"
+		    android:orientation="horizontal">
+		
+   		    <TextView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+			    android:textSize="12sp"
+			    android:autoLink="all"
+		        android:text="@string/info"
+		        android:gravity="bottom|start" />			        
+
+      </RelativeLayout>
+
+
+</RelativeLayout>

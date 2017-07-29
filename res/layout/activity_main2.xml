@@ -1,0 +1,215 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"     
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/pogobackground"
+    android:id="@+id/RootView1">
+    
+    
+   	<RelativeLayout  
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true"
+	    android:gravity="center_vertical"
+	    android:orientation="horizontal">
+
+
+	    <ImageView
+	        android:layout_width="100dp"
+	        android:layout_height="70dp"
+	        android:scaleType="centerInside"
+   	    	android:padding="0dp"
+	    	android:layout_alignParentRight="true"
+	        android:src="@drawable/northwestern"	/>
+	    
+  		    <ImageView
+	        android:layout_width="100dp"
+	        android:layout_height="70dp"
+	        android:scaleType="centerInside"
+	        android:padding="5dp"
+	    	android:layout_alignParentLeft="true"
+	        android:src="@drawable/nxr"	/>
+		        
+
+     </RelativeLayout>    
+    
+    
+    <LinearLayout android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_gravity="center_vertical"
+          android:gravity="center"
+   		  android:orientation="vertical">
+
+	     <Button
+	         android:id="@+id/new_2"
+	         android:layout_width="300dp"
+	         android:layout_height="50dp"
+	         android:text="@string/new_game" 
+	         android:textSize="24sp"
+   	         android:textColor="@color/Yellow"
+	         android:background="@android:drawable/btn_default"
+	         android:onClick="startnewGame2"/>
+	     
+	     <Button
+	        android:id="@+id/resumebutton2"
+	        android:layout_width="300dp"
+	        android:layout_height="50dp"
+	        android:text="@string/resume_game"
+	        android:textSize="24sp"
+     	    android:background="@android:drawable/btn_default"
+	        android:onClick="resumeGame2" />
+	     
+	     <Button
+	         android:id="@+id/high_scores"
+	         android:layout_width="300dp"
+	         android:layout_height="50dp"
+	         android:text="@string/high_scores" 
+	         android:textSize="24sp"
+	  	     android:textColor="@color/Yellow"
+	         android:background="@android:drawable/btn_default"
+	         android:onClick="high_scores_screen"/>
+    	 
+  	 	 <TextView 
+  	 	    android:id="@+id/accel"
+	        android:layout_width="wrap_content"
+	        android:layout_height="40dp"
+	        android:text="ACCELEROMETER?"
+	        android:textColor="@color/Red"
+     		android:textSize="16sp"
+	        android:gravity="center"  />
+    	 
+  	 	<RadioGroup 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal">
+		    <RadioButton android:id="@+id/no"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="NO"
+		        android:textSize="12sp"
+		        android:checked = "true"
+		        android:onClick="onAccelclicked"/>
+		    <RadioButton android:id="@+id/yes"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="YES"
+		        android:textSize="12sp"
+		        android:onClick="onAccelclicked"/>	    
+		</RadioGroup>
+	          	
+	    <TextView 
+	        android:id="@+id/diff_level"
+	        android:layout_width="wrap_content"
+	        android:layout_height="40dp"
+	        android:text="DIFFICULTY LEVEL"
+	        android:textColor="@color/Red"
+     		android:textSize="16sp"
+	        android:gravity="center"  />
+
+	    
+		<RadioGroup 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+	    	android:gravity="center">
+		    <RadioButton android:id="@+id/radio_easy2"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="EASY"
+		        android:textSize="10sp"
+		        android:checked = "true"
+		        android:onClick="onRadioButtonClicked2"/>
+		    <RadioButton android:id="@+id/radio_medium2"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="MEDIUM"
+		        android:textSize="10sp"
+		        android:onClick="onRadioButtonClicked2"/>	    
+	   	    <RadioButton android:id="@+id/radio_hard2"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="HARD"
+		        android:textSize="10sp"
+		        android:onClick="onRadioButtonClicked2"/>
+  	    	 <RadioButton android:id="@+id/radio_hard_invisible"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="DEMO"
+		        android:textSize="10sp"
+		        android:onClick="onRadioButtonClicked2"/>
+		</RadioGroup>
+
+
+		
+		<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal"
+			    android:gravity="center"  >
+	   	    
+			    <TextView 
+			        android:id="@+id/user_name"
+			        android:layout_width="wrap_content"
+			        android:layout_height="40dp"
+			        android:text="USERNAME"
+			        android:textColor="@color/Red"
+		     		android:textSize="16sp"
+			        android:gravity="center"  />
+			    
+			    <EditText
+      			    android:id="@+id/user_name2"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+     		     	android:textSize="16sp"
+     		     	android:textColor="@color/black"
+			        android:hint="Empty"
+			        android:maxLength="5" />
+
+			    <Button
+			        android:id="@+id/set_user"
+			        android:layout_width="wrap_content"
+			        android:layout_height="40dp"
+			        android:text="OK" 
+			        android:textSize="16sp"
+			  	    android:textColor="@color/black"
+			        android:background="@android:drawable/btn_default"
+			        android:onClick="set_username"/>
+		</LinearLayout>
+		
+		<ProgressBar
+		        android:id="@+id/progressBar2"
+		        style="?android:attr/progressBarStyleHorizontal"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:max="100"
+		        android:progress="1" 
+		        android:minHeight="15dp"
+	        	android:minWidth="150dp"
+		        android:visibility="invisible"
+		        android:indeterminate="true" />	
+	        
+    </LinearLayout>
+	      
+    
+    <!-- Info here -->
+	<RelativeLayout  
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentBottom="true"
+		    android:gravity="center_vertical"
+		    android:orientation="horizontal">
+		
+   		    <TextView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textColor="@color/black"
+			    android:textSize="12sp"
+			    android:autoLink="all"
+		        android:text="@string/info"
+		        android:gravity="bottom|start" />			        
+
+      </RelativeLayout>
+
+
+</RelativeLayout>

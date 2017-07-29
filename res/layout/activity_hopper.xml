@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"     
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity = "center_horizontal"
+    android:background="@color/aqua"
+    android:id="@+id/RootView2">
+    
+            
+    <com.sacgames.hopper.GameView2
+	    android:id="@+id/gameview2"
+	    android:layout_width="match_parent"
+   	    android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"/>   
+
+    
+    <LinearLayout  android:id="@+id/linlayout"
+        android:background="@color/green" 
+	    android:layout_width="match_parent"
+	    android:layout_height="45dp"
+	    android:layout_alignParentBottom="true"
+	    android:orientation="horizontal"
+	    android:layout_gravity="center_horizontal">
+	    
+        <ImageButton
+	        android:id="@+id/imageButton1"
+	        android:layout_height="match_parent"
+	        android:layout_width="80dp"
+    	    android:onClick="arrow_left"
+	        android:layout_gravity="center_vertical"
+	        android:scaleType="centerInside" 
+	        android:background="@drawable/left_arrow_select"/>
+        
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+    
+	    <ImageButton 
+			 android:layout_width="80dp"
+	         android:layout_height="match_parent"
+	         android:onClick="resetGame2"
+	         android:layout_gravity="center_vertical"
+   	         android:scaleType="centerInside"
+   	         android:background="@drawable/newgame_select" />
+	    
+	    <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+	  	
+	    <TextView android:id="@+id/text2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+		    android:layout_gravity="center_vertical"
+	        android:text=" "
+	        android:gravity="center" 
+	        android:textColor="@color/Red"
+	        android:textSize="32sp"
+	        android:textStyle="bold" />  
+	        
+	    <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+	        
+   	    <ImageView
+	        android:layout_width="40dp"
+	        android:layout_height="match_parent"
+	        android:scaleType="centerInside"
+	        android:src="@drawable/pogoface"	/>	
+	        
+	     <TextView android:id="@+id/text3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+		    android:layout_gravity="center_vertical"
+	        android:gravity="center" 
+	        android:textColor="@color/black"
+	        android:textSize="18sp"
+	        android:textStyle="bold" /> 
+	    
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+        
+        <ImageButton
+	        android:id="@+id/imageButton2"
+	        android:layout_height="match_parent"
+	        android:layout_width="80dp"
+    	    android:onClick="arrow_right"
+	        android:layout_gravity="center_vertical"
+	        android:scaleType="centerInside"
+	        android:background="@drawable/right_arrow_select" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+

@@ -1,0 +1,98 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"     
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity = "center_horizontal"
+    android:orientation="vertical"
+    android:id="@+id/RootView">
+    
+    <LinearLayout  
+	    android:background="@color/aqua"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal">
+    
+	    <Button android:id="@+id/new_game"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:text="@string/new_game" 
+	         android:onClick="resetGame"
+	         android:layout_gravity="center_vertical"
+	         android:textSize="12sp"/>
+	  	
+	    <TextView android:id="@+id/text"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+		    android:layout_gravity="center_vertical"
+		    android:textSize="12sp"
+	        android:text="0s"
+	        android:gravity="center" />
+	    
+   	    <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+	    
+   	    <ToggleButton 
+		    android:id="@+id/swing_up"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textOn="SAC Demo"
+		    android:textOff="SAC Demo"
+		    android:onClick="onSACClicked"
+		    android:layout_gravity="center_vertical"
+		    android:textSize="12sp"/>
+   	    
+ 	    <ToggleButton 
+		    android:id="@+id/lqr_on"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textOn="LQR ON"
+		    android:textOff="LQR OFF"
+		    android:onClick="onLQRClicked"
+		    android:layout_gravity="center_vertical"
+   	        android:visibility="invisible"
+		    android:textSize="12sp"/>
+	    
+	    <ToggleButton 
+		    android:id="@+id/vis_cues"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textOn="Vis. Cues ON"
+		    android:textOff="Vis. Cues OFF"
+		    android:onClick="onVisCuesClicked"
+		    android:layout_gravity="center_vertical"
+		    android:textSize="12sp"/>
+	    
+	    <ToggleButton 
+		    android:id="@+id/vib_cues"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textOn="Vib. Cues ON"
+		    android:textOff="Vib. Cues OFF"
+		    android:onClick="onVibCuesClicked"
+		    android:layout_gravity="center_vertical"
+		    android:textSize="12sp"/>
+	    	
+		<ToggleButton 
+		    android:id="@+id/shared"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textOn="Shared Mode ON"
+		    android:textOff="Shared Mode OFF"
+		    android:onClick="onSharedClicked"
+		    android:layout_gravity="center_vertical"
+		    android:textSize="12sp"/>
+    </LinearLayout>
+    
+    <com.sacgames.pendulumbalance.GameView
+	    android:id="@+id/gameview"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"/>
+
+
+</LinearLayout>
+
+

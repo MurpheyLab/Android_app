@@ -1,0 +1,78 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"     
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="@drawable/pogobackground"
+    android:id="@+id/RootView3" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal">
+        
+        <TextView
+	        android:id="@+id/high_scores"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="28sp"
+    	    android:text="High Scores!"
+	  	    android:textColor="@color/Red"/>
+        
+      	<TextView
+	        android:id="@+id/easy"
+	        android:layout_width="wrap_content"
+	        android:layout_height="70dp"
+	        android:textSize="24sp"
+    	    android:text="EASY"
+	  	    android:textColor="@color/Red"
+	  	    android:gravity="center"/>
+
+	    <TextView
+	        android:id="@+id/scores_easy"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"/>
+	    
+	    <TextView
+	        android:id="@+id/medium"
+	        android:layout_width="wrap_content"
+	        android:layout_height="70dp"
+	        android:textSize="24sp"
+    	    android:text="MEDIUM"
+	  	    android:textColor="@color/Red"
+	  	    android:gravity="center"/>
+	    
+	    <TextView
+	        android:id="@+id/scores_medium"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"/>
+	    
+	     <TextView
+	        android:id="@+id/hard"
+	        android:layout_width="wrap_content"
+	        android:layout_height="70dp"
+	        android:textSize="24sp"
+    	    android:text="HARD"
+	  	    android:textColor="@color/Red"
+	  	    android:gravity="center"/>
+	     
+	     <TextView
+	        android:id="@+id/scores_hard"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"/>
+	    
+	    <Button
+	        android:id="@+id/buttonAlert"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Delete Scores"
+	  	    android:textSize="24sp"
+	 	    android:textColor="@color/Yellow"
+	        android:background="@android:drawable/btn_default"
+	        android:onClick="erase_scores" />
+    
+     </LinearLayout>
+
+</ScrollView>
